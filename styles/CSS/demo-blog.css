@@ -36,7 +36,6 @@ body {
   min-height: 85px;
   width: 100%;
   margin: 0 auto;
-  z-index: 2;
 }
 
 .nav .logo img {
@@ -52,7 +51,7 @@ body {
 .nav .burger div {
   width: 100%;
   height: 0.25em;
-  background-color: #c19855;
+  background-color: #daa44e;
   border-radius: 10px;
 }
 
@@ -106,7 +105,7 @@ body {
 }
 
 .navigator div a:hover {
-  color: #c19855;
+  color: #daa44e;
 }
 
 .navigator div span {
@@ -150,7 +149,7 @@ body {
 }
 
 .e-book button {
-  border: 2px solid #c19855;
+  border: 2px solid #daa44e;
   border-radius: 3px;
   outline: none;
   padding: 0.5em 2.2em;
@@ -158,7 +157,7 @@ body {
   font-family: "Be Vietnam", sans-serif;
   font-weight: 500;
   color: white;
-  background-color: #c19855;
+  background-color: #daa44e;
   cursor: pointer;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
@@ -166,7 +165,7 @@ body {
 
 .e-book button:hover {
   background-color: rgba(0, 0, 0, 0.03);
-  color: #c19855;
+  color: #daa44e;
 }
 
 .hidden {
