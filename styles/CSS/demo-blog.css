@@ -1,0 +1,175 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Be Vietnam", sans-serif;
+}
+
+.content {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 85px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.nav .logo img {
+  height: 35px;
+}
+
+.nav .burger {
+  height: auto;
+  width: 1.8em;
+  cursor: pointer;
+}
+
+.nav .burger div {
+  width: 100%;
+  height: 0.25em;
+  background-color: #c19855;
+  border-radius: 10px;
+}
+
+.nav .burger div:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.navigator {
+  width: 100%;
+  height: 125px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 19, 40, 0.4)), to(rgba(0, 19, 40, 0.4))), url(../../../img/blog-navigator.jpg) no-repeat center center/cover;
+  background: linear-gradient(0deg, rgba(0, 19, 40, 0.4), rgba(0, 19, 40, 0.4)), url(../../../img/blog-navigator.jpg) no-repeat center center/cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 550px) {
+  .navigator {
+    height: 250px;
+  }
+}
+
+.navigator div {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  color: whitesmoke;
+}
+
+.navigator div h3 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 700px) {
+  .navigator div h3 {
+    font-size: 4rem;
+  }
+}
+
+.navigator div a {
+  color: #b3b3b3;
+  cursor: pointer;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+.navigator div a:hover {
+  color: #c19855;
+}
+
+.navigator div span {
+  font-weight: 500;
+}
+
+.e-book {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.03);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  padding: 1.6em 0;
+}
+
+.e-book h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.4em;
+  width: 70%;
+}
+
+.e-book p {
+  width: 90%;
+  font-weight: 300;
+  color: #2c2c2c;
+  margin-bottom: 1.8em;
+  line-height: 30px;
+}
+
+.e-book span {
+  font-weight: 700;
+}
+
+.e-book button {
+  border: 2px solid #c19855;
+  border-radius: 3px;
+  outline: none;
+  padding: 0.5em 2.2em;
+  font-size: 1rem;
+  font-family: "Be Vietnam", sans-serif;
+  font-weight: 500;
+  color: white;
+  background-color: #c19855;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.e-book button:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  color: #c19855;
+}
+
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=demo-blog.css.map */
