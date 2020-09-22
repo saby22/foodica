@@ -4,3 +4,40 @@
 @import '../2-components/hidden';
 @import '../2-components/footer';
 
+.recent-posts{
+    width: 100%;
+    margin: 2em 0;
+    // border: 1px solid;
+    
+    .recent-posts-heading{
+        font-weight: 800;
+        font-size: 1.8rem;
+        color: $golden;
+        position: relative;
+        margin-bottom: 0.6em;
+    }
+    
+    .recent-posts-heading::after{
+        content:"";
+        position: absolute;
+        bottom: 7px;
+        left: 184px;
+        width: 8px;
+        height: 8px;
+        background-color: $black;
+        border-radius: 10px;
+    }
+
+    #rp{
+        @include recent-posts;
+        border-bottom:1px solid rgba(0,0,0,0.2);
+    }
+
+    #rp:not(:first-of-type){
+        padding: 1.3em 0;
+    }
+
+    #rp:first-of-type{
+        padding-bottom: 1.3em;
+    }
+}
