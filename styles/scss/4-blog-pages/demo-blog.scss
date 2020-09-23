@@ -8,6 +8,12 @@
 .blog-content{
     width: 100%;
     margin-bottom: 4em;
+    @include min-width(700px){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
     .blog{
         margin: 2em 0;
         img{
@@ -28,9 +34,28 @@
             color: $black;
             line-height: 1.7em;
         }
+
+        @include min-width(700px){
+            width: 55%;
+            margin: 3em 0;
+        }
+
+        @include min-width(1000px){
+            width: 65%;
+        }
+    }
+    .e-book{
+        @include min-width(700px){
+            width: 35%;
+            margin-top: 3em;
+        }
+        @include min-width(1000px){
+            width: 25%;
+        }
     }
     .feedback{
         width: 100%;
+        max-width: 700px;
         margin-top: 2em;
 
         h1{
