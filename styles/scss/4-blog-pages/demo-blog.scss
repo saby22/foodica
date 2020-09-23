@@ -55,8 +55,14 @@
     }
     .feedback{
         width: 100%;
-        max-width: 700px;
         margin-top: 2em;
+        @include min-width(700px){
+            width: 55%;
+        }
+
+        @include min-width(1000px){
+            width: 60%;
+        }
 
         h1{
             color: $golden;
@@ -75,7 +81,10 @@
                 color: $golden;
             }
             div{
-                margin-bottom: 0.6em;
+                margin-bottom: 1em;
+                @include min-width(700px){
+                    margin-bottom: 1.1em;
+                }
                 input,textarea{
                     width: 100%;
                     outline: none;
@@ -109,6 +118,103 @@
             input[type="submit"]:hover{
                 color: white;
                 background-color: $golden;
+            }
+        }
+    }
+    .recent-posts{
+        width: 100%;
+        margin: 2em 0 6em 0;
+        @include min-width(700px){
+            width: 35%;
+            margin: 2em 0;
+        }
+
+        @include min-width(1000px){
+            width: 30%;
+        }
+
+        .recent-posts-heading{
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: $golden;
+            position: relative;
+            margin-bottom: 0.6em;
+            
+            @include min-width(700px){
+                font-size: 2.1rem;
+            }
+        }
+        
+        .recent-posts-heading::after{
+            content:"";
+            position: absolute;
+            bottom: 7px;
+            left: 210px;
+            width: 8px;
+            height: 8px;
+            background-color: $black;
+            border-radius: 10px;
+            // @include min-width(700px){
+            //     left: 215px;
+            // }
+        }
+    
+        .recent-posts-contents{
+            // @include min-width(700px){
+            //     display: flex;
+            //     justify-content: space-between;
+            //     align-items: flex-start;
+            // }
+        }
+    
+        .recent-individual-posts{
+            margin-bottom: 1.5em;
+            // @include min-width(700px){
+            //     width: 60%;
+            // }
+    
+            // @include min-width(1000px){
+            //     display: flex;
+            //     justify-content: space-between;
+            //     flex-wrap: wrap;
+            //     width:75%;
+            // }
+    
+            #rp{
+                @include recent-posts;
+                button{
+                    background-color: $golden;
+                    color: white;
+                }
+                button:hover{
+                    color: $golden;
+                    background-color: transparent;
+                }
+                // @include min-width(1000px){
+                //     width:47%;
+                //     margin-bottom: 4em;
+                // }
+            }
+        
+            #rp:not(:last-of-type){
+                border-bottom:1px solid rgba(0,0,0,0.2);
+                // @include min-width(440px){
+                //     border:none;
+                // }
+            }
+        
+            #rp:not(:first-of-type){
+                padding: 1.3em 0;
+                // @include min-width(1000px){
+                //     padding: 0;
+                // }
+            }
+    
+            #rp:first-of-type{
+                padding-bottom: 1.3em;
+                // @include min-width(1000px){
+                //     padding: 0;
+                // }
             }
         }
     }

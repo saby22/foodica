@@ -60,7 +60,7 @@
             <div class="blog">
                 <img src="../img/rp-1.jpg" alt="">
                 <h3>Posted By <span>Sabyasachi</span> on <span>September 11, 2019</span></h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente velit alias. Ducimus quis blanditiis dolores minima neque iste voluptate inventore nisi voluptatibus rem asperiores, ea soluta necessitatibus corporis numquam officia facere beatae molestiae ut laborum. Aliquid molestias, modi ullam voluptas nostrum corrupti voluptates laudantium nulla maiores explicabo dolore tempore distinctio incidunt quidem deserunt praesentium fugiat.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente velit alias. Ducimus quis blanditiis dolores minima neque iste voluptate inventore nisi voluptatibus rem asperiores, ea soluta necessitatibus.</p>
                 <br>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur exercitationem, sint vel quam commodi quae vero soluta ad sapiente error ipsum, officiis blanditiis velit quo, voluptas non alias nobis? Voluptatem.</p>
                 <br>
@@ -75,7 +75,7 @@
             </div>
             <div class="feedback">
                 <h1>Leave a comment</h1>
-                <form>
+                <form autocomplete="off">
                     <div class="name">
                         <label for="name">Name <span>*</span></label>
                         <input type="text" placeholder="John Doe" id="name" autocomplete="off">
@@ -86,11 +86,29 @@
                     </div>
                     <div class="message">
                         <label for="message">Comment</label>
-                        <textarea id="message" cols="40" rows="10"></textarea>
+                        <textarea id="message" cols="40" rows="10" placeholder="Type your message here"></textarea>
                     </div>
                     <input type="submit">
                 </form>
             </div>
+            <section class="recent-posts">
+                <h1 class="recent-posts-heading">Recent Posts</h1>
+                <div class="recent-posts-contents">
+                    <div class="recent-individual-posts">
+                        <div id="rp">
+                            <img src="../img/rp-2.jpg" alt="">
+                            <div class="recent-posts-content">
+                                <h1>Lorem ipsum dolor sit amet?</h1>
+                                <h5>September 11, 2019 Posted by Admin</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elita inventore perferendis quae, quas enim perspiciatis hic, fugiat doloremque veritatis. Quibusdam, recusandae [...]</p>
+                                <a href="./demo-blog.html">
+                                    <button>Read More</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
     </div>
     <!-- BLOG PAGE MAIN CONTENT END -->
