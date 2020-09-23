@@ -1,6 +1,5 @@
 *, *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -24,28 +23,34 @@ body {
 }
 
 .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   min-height: 85px;
   width: 100%;
   margin: 0 auto;
 }
 
 .nav .logo img {
-  height: 35px;
+  height: 37px;
+}
+
+@media screen and (min-width: 810px) {
+  .nav .logo img {
+    height: 40px;
+  }
 }
 
 .nav .burger {
   height: auto;
   width: 1.8em;
   cursor: pointer;
+}
+
+@media screen and (min-width: 810px) {
+  .nav .burger {
+    display: none;
+  }
 }
 
 .nav .burger div {
@@ -57,6 +62,25 @@ body {
 
 .nav .burger div:not(:last-child) {
   margin-bottom: 4px;
+}
+
+.nav-links {
+  justify-content: space-between;
+  width: 45%;
+  display: none;
+}
+
+@media screen and (min-width: 810px) {
+  .nav-links {
+    display: flex;
+  }
+}
+
+.nav-links a {
+  color: #daa44e;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1.3px;
 }
 
 .newsletter {
@@ -72,30 +96,17 @@ body {
 
 .newsletter .newsletter-container {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .newsletter .newsletter-container .newsletter-content {
   max-width: 500px;
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .newsletter .newsletter-container .newsletter-content h1 {
@@ -127,18 +138,12 @@ body {
 
 .newsletter .newsletter-container .newsletter-content form {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .newsletter .newsletter-container .newsletter-content input[type="text"] {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  flex-grow: 2;
   width: 70%;
   height: 60px;
   outline: none;
@@ -164,7 +169,6 @@ body {
   border-radius: 0 5px 5px 0;
   color: white;
   cursor: pointer;
-  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
@@ -219,7 +223,7 @@ body {
   font-family: "Be Vietnam", sans-serif;
   font-weight: 500;
   color: #daa44e;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: transparent;
   cursor: pointer;
   transition: all 200ms ease-in-out;
 }
