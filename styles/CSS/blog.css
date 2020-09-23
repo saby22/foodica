@@ -114,7 +114,7 @@ body {
 
 .e-book {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: #f8f9fa;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,7 +164,7 @@ body {
 }
 
 .e-book button:hover {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: transparent;
   color: #daa44e;
 }
 
@@ -330,7 +330,12 @@ body {
 .featured-posts {
   width: 100%;
   margin: 0 0 2em 0;
-  padding: 1.5em;
+}
+
+@media screen and (min-width: 700px) {
+  .featured-posts {
+    padding: 1.5em;
+  }
 }
 
 .featured-posts-heading {

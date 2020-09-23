@@ -8,10 +8,11 @@
     <title>Demo-Blog Foodica</title>
 </head>
 <body>
+    <!-- NAVBAR SECTION START -->
     <div class="content">
         <nav class="nav">
             <div class="logo">
-                <a href="./index.html">
+                <a href="/">
                     <img src="../img/Foodica logo.svg" alt="foodica">
                 </a>
             </div>
@@ -36,9 +37,12 @@
             </div>
         </nav>
     </div>
+    <!-- NAVBAR SECTION END -->
+
+    <!-- NAVIGATOR SECTION START -->
     <section class="navigator">
         <div>
-            <h3>Blogs</h3>
+            <h3>Demo Blog</h3>
             <p>
                 <a href="./index.html">Home</a> 
                 / 
@@ -48,11 +52,17 @@
             </p>
         </div>
     </section>
+    <!-- NAVIGATOR SECTION END -->
+
+    <!-- BLOG PAGE MAIN CONTENT START -->
     <div class="content">
         <section class="blog-content">
             <div class="blog">
                 <img src="../img/rp-1.jpg" alt="">
-                
+                <h3>Posted By <span>Sabyasachi</span> on <span>September 11, 2019</span></h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sapiente velit alias. Ducimus quis blanditiis dolores minima neque iste voluptate inventore nisi voluptatibus rem asperiores, ea soluta necessitatibus corporis numquam officia facere beatae molestiae ut laborum. Aliquid molestias, modi ullam voluptas nostrum corrupti voluptates laudantium nulla maiores explicabo dolore tempore distinctio incidunt quidem deserunt praesentium fugiat. Dolore eum ullam amet exercitationem dignissimos minima! Praesentium, molestias!</p>
+                <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur exercitationem, sint vel quam commodi quae vero soluta ad sapiente error ipsum, officiis blanditiis velit quo, voluptas non alias nobis? Voluptatem.</p>
             </div>
             <div class="e-book">
                 <h1>Buy My Recipe Book!</h1>
@@ -61,7 +71,26 @@
                     <button>Buy Now</button>
                 </a>
             </div>
+            <div class="feedback">
+                <h1>Leave a comment</h1>
+                <form>
+                    <div class="name">
+                        <label for="name">Name <span>*</span></label>
+                        <input type="text" placeholder="John Doe" id="name" autocomplete="off">
+                    </div>
+                    <div class="email">
+                        <label for="name">Email <span>*</span></label>
+                        <input type="text" placeholder="abc@example.com" id="email" autocomplete="off">
+                    </div>
+                    <div class="message">
+                        <label for="message">Comment</label>
+                        <textarea id="message" cols="40" rows="10"></textarea>
+                    </div>
+                    <input type="submit">
+                </form>
+            </div>
         </section>
     </div>
+    <!-- BLOG PAGE MAIN CONTENT END -->
 </body>
 </html>

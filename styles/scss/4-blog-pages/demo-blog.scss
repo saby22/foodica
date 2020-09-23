@@ -4,3 +4,87 @@
 @import '../2-components/e-book';
 @import '../2-components/footer';
 @import '../2-components/hidden';
+
+.blog-content{
+    width: 100%;
+    margin-bottom: 4em;
+    .blog{
+        margin: 2em 0;
+        img{
+            width: 100%;
+        }
+        h3{
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: $black;
+            margin: 1.6em 0;
+            opacity: 0.8;
+            span{
+                font-weight: 500;
+            }
+        }
+        p{
+            font-size: 1.05rem;
+            color: $black;
+            line-height: 1.7em;
+        }
+    }
+    .feedback{
+        width: 100%;
+        margin-top: 2em;
+
+        h1{
+            color: $golden;
+            margin-bottom: 0.8em;
+            border-bottom: 1px solid $golden;
+            max-width: 400px;
+            padding-bottom: 7px;
+        }
+
+        form{
+            label{
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+            span{
+                color: $golden;
+            }
+            div{
+                margin-bottom: 0.6em;
+                input,textarea{
+                    width: 100%;
+                    outline: none;
+                    border: 1px solid rgba(0,0,0,0.3);
+                    font-family: inherit;
+                    font-weight: 400;
+                    padding: 0.6em;
+                    border-radius: 3px;
+                }
+                input{
+                    height: 3em;
+                }
+                input:focus,textarea:focus{
+                    border: 1px solid $golden;
+                    box-shadow: 0px 0px 26px -12px rgba(0,0,0,0.44);
+                }
+            }
+            input[type="submit"]{
+                border: 2px solid $golden;
+                border-radius: 3px;
+                outline: none;
+                padding: 0.9em 2.8em;
+                font-size: 1rem;
+                font-family: $beVietnam;
+                font-weight: 500;
+                background-color: transparent;
+                color: $golden;
+                cursor: pointer;
+                transition: all 200ms ease-in-out;
+            }
+            input[type="submit"]:hover{
+                color: white;
+                background-color: $golden;
+            }
+        }
+    }
+}

@@ -114,7 +114,7 @@ body {
 
 .e-book {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: #f8f9fa;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,11 +164,108 @@ body {
 }
 
 .e-book button:hover {
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: transparent;
   color: #daa44e;
 }
 
 .hidden {
   display: none;
+}
+
+.blog-content {
+  width: 100%;
+  margin-bottom: 4em;
+}
+
+.blog-content .blog {
+  margin: 2em 0;
+}
+
+.blog-content .blog img {
+  width: 100%;
+}
+
+.blog-content .blog h3 {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #2c2c2c;
+  margin: 1.6em 0;
+  opacity: 0.8;
+}
+
+.blog-content .blog h3 span {
+  font-weight: 500;
+}
+
+.blog-content .blog p {
+  font-size: 1.05rem;
+  color: #2c2c2c;
+  line-height: 1.7em;
+}
+
+.blog-content .feedback {
+  width: 100%;
+  margin-top: 2em;
+}
+
+.blog-content .feedback h1 {
+  color: #daa44e;
+  margin-bottom: 0.8em;
+  border-bottom: 1px solid #daa44e;
+  max-width: 400px;
+  padding-bottom: 7px;
+}
+
+.blog-content .feedback form label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.blog-content .feedback form span {
+  color: #daa44e;
+}
+
+.blog-content .feedback form div {
+  margin-bottom: 0.6em;
+}
+
+.blog-content .feedback form div input, .blog-content .feedback form div textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  font-family: inherit;
+  font-weight: 400;
+  padding: 0.6em;
+  border-radius: 3px;
+}
+
+.blog-content .feedback form div input {
+  height: 3em;
+}
+
+.blog-content .feedback form div input:focus, .blog-content .feedback form div textarea:focus {
+  border: 1px solid #daa44e;
+  -webkit-box-shadow: 0px 0px 26px -12px rgba(0, 0, 0, 0.44);
+          box-shadow: 0px 0px 26px -12px rgba(0, 0, 0, 0.44);
+}
+
+.blog-content .feedback form input[type="submit"] {
+  border: 2px solid #daa44e;
+  border-radius: 3px;
+  outline: none;
+  padding: 0.9em 2.8em;
+  font-size: 1rem;
+  font-family: "Be Vietnam", sans-serif;
+  font-weight: 500;
+  background-color: transparent;
+  color: #daa44e;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.blog-content .feedback form input[type="submit"]:hover {
+  color: white;
+  background-color: #daa44e;
 }
 /*# sourceMappingURL=demo-blog.css.map */
