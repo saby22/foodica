@@ -59,6 +59,119 @@ body {
   margin-bottom: 4px;
 }
 
+.newsletter {
+  height: 400px;
+  background-color: #daa44e;
+}
+
+@media screen and (min-width: 700px) {
+  .newsletter {
+    height: 375px;
+  }
+}
+
+.newsletter .newsletter-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.newsletter .newsletter-container .newsletter-content {
+  max-width: 500px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newsletter .newsletter-container .newsletter-content h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+  line-height: 1.4em;
+  margin-bottom: 0.6em;
+}
+
+@media screen and (min-width: 700px) {
+  .newsletter .newsletter-container .newsletter-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.newsletter .newsletter-container .newsletter-content p {
+  text-align: center;
+  color: whitesmoke;
+  line-height: 1.8em;
+  margin-bottom: 1.4em;
+}
+
+@media screen and (min-width: 700px) {
+  .newsletter .newsletter-container .newsletter-content p {
+    font-size: 1.1rem;
+  }
+}
+
+.newsletter .newsletter-container .newsletter-content form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.newsletter .newsletter-container .newsletter-content input[type="text"] {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  width: 70%;
+  height: 60px;
+  outline: none;
+  border: none;
+  background-color: #f1f1f1;
+  border-radius: 5px 0 0 5px;
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 1.1rem;
+  padding: 0 0.6em;
+  color: rgba(0, 0, 0, 0.7);
+  display: inline;
+}
+
+.newsletter .newsletter-container .newsletter-content input[type="submit"] {
+  border: 2px solid black;
+  outline: none;
+  padding: 1em 1.5em;
+  font-size: 1rem;
+  font-family: "Be Vietnam", sans-serif;
+  font-weight: 500;
+  background-color: black;
+  border-radius: 0 5px 5px 0;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.newsletter .newsletter-container .newsletter-content input[type="submit"]:hover {
+  opacity: 0.5;
+}
+
 .hidden {
   display: none;
 }

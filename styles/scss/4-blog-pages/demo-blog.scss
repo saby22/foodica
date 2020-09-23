@@ -3,6 +3,7 @@
 @import '../2-components/navigator';
 @import '../2-components/e-book';
 @import '../2-components/footer';
+@import '../2-components/newsletter';
 @import '../2-components/hidden';
 
 .blog-content{
@@ -123,7 +124,7 @@
     }
     .recent-posts{
         width: 100%;
-        margin: 2em 0 6em 0;
+        margin: 2em 0 0 0;
         @include min-width(700px){
             width: 35%;
             margin: 2em 0;
@@ -149,37 +150,18 @@
             content:"";
             position: absolute;
             bottom: 7px;
-            left: 210px;
+            left: 184px;
             width: 8px;
             height: 8px;
             background-color: $black;
             border-radius: 10px;
-            // @include min-width(700px){
-            //     left: 215px;
-            // }
+            @include min-width(700px){
+                left: 210px;
+            }
         }
-    
-        .recent-posts-contents{
-            // @include min-width(700px){
-            //     display: flex;
-            //     justify-content: space-between;
-            //     align-items: flex-start;
-            // }
-        }
-    
+
         .recent-individual-posts{
             margin-bottom: 1.5em;
-            // @include min-width(700px){
-            //     width: 60%;
-            // }
-    
-            // @include min-width(1000px){
-            //     display: flex;
-            //     justify-content: space-between;
-            //     flex-wrap: wrap;
-            //     width:75%;
-            // }
-    
             #rp{
                 @include recent-posts;
                 button{
@@ -190,31 +172,18 @@
                     color: $golden;
                     background-color: transparent;
                 }
-                // @include min-width(1000px){
-                //     width:47%;
-                //     margin-bottom: 4em;
-                // }
             }
         
             #rp:not(:last-of-type){
                 border-bottom:1px solid rgba(0,0,0,0.2);
-                // @include min-width(440px){
-                //     border:none;
-                // }
             }
         
             #rp:not(:first-of-type){
                 padding: 1.3em 0;
-                // @include min-width(1000px){
-                //     padding: 0;
-                // }
             }
     
             #rp:first-of-type{
                 padding-bottom: 1.3em;
-                // @include min-width(1000px){
-                //     padding: 0;
-                // }
             }
         }
     }
