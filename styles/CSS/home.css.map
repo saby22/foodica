@@ -11,6 +11,7 @@
         "../scss/1-base/_resets.scss",
         "../scss/2-components/_footer.scss",
         "../scss/2-components/_navbar.scss",
+        "../scss/2-components/_newsletter.scss",
         "../scss/2-components/_hidden.scss"
     ],
     "names": [],

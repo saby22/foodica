@@ -8,16 +8,17 @@
     <title>Foodica - Blog</title>
 </head>
 <body>
+    <!-- NAVBAR SECTION START -->
     <div class="content">
         <nav class="nav">
             <div class="logo">
-                <a href="./index.html">
+                <a href="/">
                     <img src="./img/Foodica logo.svg" alt="foodica">
                 </a>
             </div>
             <ul class="nav-links hidden">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
                     <a href="./blog.html">Blogs</a>
@@ -36,16 +37,22 @@
             </div>
         </nav>
     </div>
+    <!-- NAVBAR SECTION END -->
+
+    <!-- NAVIGATOR SECTION START -->
     <section class="navigator">
         <div>
             <h3>Blogs</h3>
             <p>
-                <a href="./index.html">Home</a> 
+                <a href="/">Home</a> 
                 / 
                 <span>Blogs</span>
             </p>
         </div>
     </section>
+    <!-- NAVIGATOR SECTION END -->
+
+    <!-- FEATURED POSTS SECTION START -->
     <div class="content">
         <section class="recent-posts">
             <h1 class="recent-posts-heading">Recent Posts</h1>
@@ -56,8 +63,8 @@
                         <div class="recent-posts-content">
                             <h1>Lorem ipsum dolor sit amet?</h1>
                             <h5>September 11, 2019 Posted by Admin</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing Quibusdam, recusandae [...]</p>
-                            <a href="#">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing Quibusdam, recusandae Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, impedit. [...]</p>
+                            <a href="./blogs/demo-blog.html">
                                 <button>Read More</button>
                             </a>
                         </div>
@@ -68,7 +75,7 @@
                             <h1>Lorem ipsum dolor sit amet?</h1>
                             <h5>September 11, 2019 Posted by Admin</h5>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elita inventore perferendis quae, quas enim perspiciatis hic, fugiat doloremque veritatis. Quibusdam, recusandae [...]</p>
-                            <a href="#">
+                            <a href="./blogs/demo-blog.html">
                                 <button>Read More</button>
                             </a>
                         </div>
@@ -79,7 +86,7 @@
                             <h1>Lorem ipsum dolor sit amet?</h1>
                             <h5>September 11, 2019 Posted by Admin</h5>
                             <p>Lorem ipsum dnim perspiciatis hic, fugiat doloremque veritatis. [...]</p>
-                            <a href="#">
+                            <a href="./blogs/demo-blog.html">
                                 <button>Read More</button>
                             </a>
                         </div>
@@ -90,7 +97,7 @@
                             <h1>Lorem ipsum dolor sit amet?</h1>
                             <h5>September 11, 2019 Posted by Admin</h5>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. perspiciatis hic, fugiat doloremque veritatis. Quibusdam, recusandae [...]</p>
-                            <a href="#">
+                            <a href="./blogs/demo-blog.html">
                                 <button>Read More</button>
                             </a>
                         </div>
@@ -100,63 +107,83 @@
                     <h1>Buy My Recipe Book!</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid exercitationem amet nihil facilis quod. A ratione, dolorum perspiciatis neque itaque iure libero? Quos, eveniet fugit?</p>
                     <a href="#">
-                        <button>Buy Now</button>
+                        <button>ORDER NOW</button>
                     </a>
                 </div>
             </div>
         </section>
-
-        <!-- FEATURED POSTS SECTION START -->
-
-        <section class="featured-posts">
-            <h1 class="featured-posts-heading">Featured Posts</h1>
-            <div class="featured-posts-content">
-                <div id="fp">
-                    <img src="./img/fp-1.jpg" alt="">
-                    <div class="featured-posts-content">
-                        <h1>Lorem ipsum dolor sit amet?</h1>
-                        <h5>September 11, 2019 Posted by Admin</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicin hic, fugiat doloremque veritatis. Quibusdam, recusandae [...]</p>
-                        <a href="#">
-                            <button>Read More</button>
-                        </a>
-                    </div>
-                </div>
-                <div id="fp">
-                    <img src="./img/fp-4.jpg" alt="">
-                    <div class="featured-posts-content">
-                        <h1>Lorem ipsum dolor sit amet?</h1>
-                        <h5>September 11, 2019 Posted by Admin</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elitat doloremque veritatis. Quibusdam, recusandae [...]</p>
-                        <a href="#">
-                            <button>Read More</button>
-                        </a>
-                    </div>
-                </div>
-                <div id="fp">
-                    <img src="./img/fp-2.jpg" alt="">
-                    <div class="featured-posts-content">
-                        <h1>Lorem ipsum dolor sit amet?</h1>
-                        <h5>September 11, 2019 Posted by Admin</h5>
-                        <p>Lorem ipsum ugiat doloremque veritatis. Quibusdam, recusandae [...]</p>
-                        <a href="#">
-                            <button>Read More</button>
-                        </a>
-                    </div>
-                </div>
-                <div id="fp">
-                    <img src="./img/fp-3.jpg" alt="">
-                    <div class="featured-posts-content">
-                        <h1>Lorem ipsum dolor sit amet?</h1>
-                        <h5>September 11, 2019 Posted by Admin</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicingae [...]</p>
-                        <a href="#">
-                            <button>Read More</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
+    <!-- RECENT POSTS SECTION END -->
+
+    <!-- FEATURED POSTS SECTION START -->
+    <section class="fp">
+        <div class="content">
+            <section class="featured-posts">
+                <h1 class="featured-posts-heading">Featured Posts</h1>
+                <div class="featured-posts-content">
+                    <div id="fp">
+                        <img src="./img/fp-1.jpg" alt="">
+                        <div class="featured-posts-content">
+                            <h1>Lorem ipsum dolor sit amet?</h1>
+                            <h5>September 11, 2019 Posted by Admin</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicin hic, fugiat doloremque veritatis. Quibusdam, recusandae [...]</p>
+                            <a href="./blogs/demo-blog.html">
+                                <button>Read More</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="fp">
+                        <img src="./img/fp-4.jpg" alt="">
+                        <div class="featured-posts-content">
+                            <h1>Lorem ipsum dolor sit amet?</h1>
+                            <h5>September 11, 2019 Posted by Admin</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elitat doloremque veritatis. Quibusdam, recusandae [...]</p>
+                            <a href="./blogs/demo-blog.html">
+                                <button>Read More</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="fp">
+                        <img src="./img/fp-2.jpg" alt="">
+                        <div class="featured-posts-content">
+                            <h1>Lorem ipsum dolor sit amet?</h1>
+                            <h5>September 11, 2019 Posted by Admin</h5>
+                            <p>Lorem ipsum ugiat doloremque veritatis. Quibusdam, recusandae [...]</p>
+                            <a href="./blogs/demo-blog.html">
+                                <button>Read More</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="fp">
+                        <img src="./img/fp-3.jpg" alt="">
+                        <div class="featured-posts-content">
+                            <h1>Lorem ipsum dolor sit amet?</h1>
+                            <h5>September 11, 2019 Posted by Admin</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicingae [...]</p>
+                            <a href="./blogs/demo-blog.html">
+                                <button>Read More</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!-- FEATURED POSTS SECTION ENDS --> 
+    
+    <!-- NEWSLETTER CONTENT START -->
+    <section class="newsletter">
+        <div class="content newsletter-container">
+            <div class="newsletter-content">
+                <h1>Subscribe to our Newsletter</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum laboriosam deserunt fugiat quos. Maiores, deleniti!</p>
+                <form>
+                <input type="text" placeholder="Enter your email address">
+                <input type="submit">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- NEWSLETTER CONTENT END -->
 </body>
 </html>

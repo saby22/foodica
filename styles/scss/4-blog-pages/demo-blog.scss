@@ -1,0 +1,190 @@
+@import '../1-base/globals';
+@import '../2-components/navbar';
+@import '../2-components/navigator';
+@import '../2-components/e-book';
+@import '../2-components/footer';
+@import '../2-components/newsletter';
+@import '../2-components/hidden';
+
+.blog-content{
+    width: 100%;
+    margin-bottom: 4em;
+    @include min-width(700px){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .blog{
+        margin: 2em 0;
+        img{
+            width: 100%;
+        }
+        h3{
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: $black;
+            margin: 1.6em 0;
+            opacity: 0.8;
+            span{
+                font-weight: 500;
+            }
+        }
+        p{
+            font-size: 1.05rem;
+            color: $black;
+            line-height: 1.7em;
+        }
+
+        @include min-width(700px){
+            width: 55%;
+            margin: 3em 0;
+        }
+
+        @include min-width(1000px){
+            width: 65%;
+        }
+    }
+    .e-book{
+        @include min-width(700px){
+            width: 35%;
+            margin-top: 3em;
+        }
+        @include min-width(1000px){
+            width: 25%;
+        }
+    }
+    .feedback{
+        width: 100%;
+        margin-top: 2em;
+        @include min-width(700px){
+            width: 55%;
+        }
+
+        @include min-width(1000px){
+            width: 60%;
+        }
+
+        h1{
+            color: $golden;
+            margin-bottom: 0.8em;
+            border-bottom: 1px solid $golden;
+            max-width: 400px;
+            padding-bottom: 7px;
+        }
+
+        form{
+            label{
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+            span{
+                color: $golden;
+            }
+            div{
+                margin-bottom: 1em;
+                @include min-width(700px){
+                    margin-bottom: 1.1em;
+                }
+                input,textarea{
+                    width: 100%;
+                    outline: none;
+                    border: 1px solid rgba(0,0,0,0.3);
+                    font-family: inherit;
+                    font-weight: 400;
+                    padding: 0.6em;
+                    border-radius: 3px;
+                }
+                input{
+                    height: 3em;
+                }
+                input:focus,textarea:focus{
+                    border: 1px solid $golden;
+                    box-shadow: 0px 0px 26px -12px rgba(0,0,0,0.44);
+                }
+            }
+            input[type="submit"]{
+                border: 2px solid $golden;
+                border-radius: 3px;
+                outline: none;
+                padding: 0.9em 2.8em;
+                font-size: 1rem;
+                font-family: $beVietnam;
+                font-weight: 500;
+                background-color: transparent;
+                color: $golden;
+                cursor: pointer;
+                transition: all 200ms ease-in-out;
+            }
+            input[type="submit"]:hover{
+                color: white;
+                background-color: $golden;
+            }
+        }
+    }
+    .recent-posts{
+        width: 100%;
+        margin: 2em 0 0 0;
+        @include min-width(700px){
+            width: 35%;
+            margin: 2em 0;
+        }
+
+        @include min-width(1000px){
+            width: 30%;
+        }
+
+        .recent-posts-heading{
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: $golden;
+            position: relative;
+            margin-bottom: 0.6em;
+            
+            @include min-width(700px){
+                font-size: 2.1rem;
+            }
+        }
+        
+        .recent-posts-heading::after{
+            content:"";
+            position: absolute;
+            bottom: 7px;
+            left: 184px;
+            width: 8px;
+            height: 8px;
+            background-color: $black;
+            border-radius: 10px;
+            @include min-width(700px){
+                left: 210px;
+            }
+        }
+
+        .recent-individual-posts{
+            margin-bottom: 1.5em;
+            #rp{
+                @include recent-posts;
+                button{
+                    background-color: $golden;
+                    color: white;
+                }
+                button:hover{
+                    color: $golden;
+                    background-color: transparent;
+                }
+            }
+        
+            #rp:not(:last-of-type){
+                border-bottom:1px solid rgba(0,0,0,0.2);
+            }
+        
+            #rp:not(:first-of-type){
+                padding: 1.3em 0;
+            }
+    
+            #rp:first-of-type{
+                padding-bottom: 1.3em;
+            }
+        }
+    }
+}
