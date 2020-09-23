@@ -1,0 +1,148 @@
+// .newsletter{
+//     height: 400px;
+//     background-color:$grey2;
+//     @include min-width(1000px){
+//         height: 300px;
+//     }
+//     .newsletter-container{
+//         height: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+
+//         .newsletter-content{
+//             max-width: 500px;
+//             height: auto;
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             h1{
+//                 font-size: 2rem;
+//                 text-align: center;
+//                 color: $golden;
+//                 line-height: 1.4em;
+//                 margin-bottom: 0.6em;
+//             }
+//             p{
+//                 text-align: center;
+//                 color: gray;
+//                 line-height: 1.8em;
+//                 margin-bottom: 1.4em;
+//             }
+//             form{
+//                 width: 100%;
+//                 display: flex;
+//                 justify-content: space-between;
+//             }
+//             input[type="text"]{
+//                 flex-grow: 1.5;
+//                 width: 70%;
+//                 height: 60px;
+//                 outline: none;
+//                 border:none;
+//                 background-color: rgba(0,0,0,0.05);
+//                 border-radius: 5px 0 0 5px;
+//                 font-family: inherit;
+//                 font-weight: 300;
+//                 font-size: 1.1rem;
+//                 padding: 0 0.6em;
+//                 color:rgba(0, 0, 0, 0.7);
+//                 display:inline
+//             }
+//             input[type="submit"]{
+//                 border: 2px solid $golden;
+//                 outline: none;
+//                 padding: 1em 1.5em;
+//                 font-size: 1rem;
+//                 font-family: $beVietnam;
+//                 font-weight: 500;
+//                 background-color: $golden;
+//                 border-radius: 0 5px 5px 0;
+//                 color: white;
+//                 cursor: pointer;
+//                 transition: all 200ms ease-in-out;
+//             }
+//             input[type="submit"]:hover{
+//                 color: $golden;
+//                 background-color: transparent;
+//             }
+//         }
+//     }
+// }
+
+.newsletter{
+    height: 400px;
+    background-color:$golden;
+    @include min-width(700px){
+        height: 375px;
+    }
+    .newsletter-container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .newsletter-content{
+            max-width: 500px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1{
+                font-size: 2rem;
+                text-align: center;
+                color: black;
+                line-height: 1.4em;
+                margin-bottom: 0.6em;
+                @include min-width(700px){
+                    font-size: 2.2rem;
+                }
+            }
+            p{
+                text-align: center;
+                color: whitesmoke;
+                line-height: 1.8em;
+                margin-bottom: 1.4em;
+                @include min-width(700px){
+                    font-size: 1.1rem;
+                }
+            }
+            form{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            input[type="text"]{
+                flex-grow: 2;
+                width: 70%;
+                height: 60px;
+                outline: none;
+                border:none;
+                background-color: rgb(241, 241, 241);
+                border-radius: 5px 0 0 5px;
+                font-family: inherit;
+                font-weight: 300;
+                font-size: 1.1rem;
+                padding: 0 0.6em;
+                color:rgba(0, 0, 0, 0.7);
+                display:inline
+            }
+            input[type="submit"]{
+                border: 2px solid black;
+                outline: none;
+                padding: 1em 1.5em;
+                font-size: 1rem;
+                font-family: $beVietnam;
+                font-weight: 500;
+                background-color: black;
+                border-radius: 0 5px 5px 0;
+                color: white;
+                cursor: pointer;
+                transition: all 200ms ease-in-out;
+            }
+            input[type="submit"]:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+}
