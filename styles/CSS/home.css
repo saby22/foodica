@@ -233,37 +233,102 @@ body {
   color: white;
 }
 
-.tip_heading {
-  margin-top: 0.5em;
-  font-family: "Great Vibes", cursive;
-  color: #daa44e;
-  font-size: 3.3rem;
-}
-
-.tip_text .tip_container {
-  border: 2px solid black;
+.chefs-choice {
   display: flex;
   flex-direction: column;
-  margin: 3em 0;
 }
 
-.tip_text .tip_container img {
-  width: 60px;
+.chefs-choice h1 {
+  margin: 0.4em 0;
+  font-family: "Great Vibes", cursive;
+  font-size: 4rem;
+  color: #daa44e;
+}
+
+.chefs-choice .course-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chefs-choice .course-container .course {
+  position: relative;
+  margin-bottom: 2.89em;
+  border-radius: 5px;
+}
+
+.chefs-choice .course-container .course img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.chefs-choice .course-container .course .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 99.5%;
+  width: 100%;
+  background-color: rgba(10, 10, 10, 0.507);
+  border-radius: 5px;
+}
+
+.chefs-choice .course-container .course h2 {
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2.8rem;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 1.5px;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  width: 100%;
   margin-bottom: 0.8em;
 }
 
-.tip_text .tip_container p {
-  font-family: "Poppins", sans-serif;
-  line-height: 1.4em;
+h1 {
+  margin-bottom: 0.1em;
+  color: #2c2c2c;
+  font-size: 1.6rem;
 }
 
-.tip_container_heading {
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
+h5 {
+  font-weight: 300;
+  color: gray;
+  font-size: 0.9rem;
 }
 
-.tip_container_heading h2 {
-  margin-left: 0.2em;
+p {
+  margin: 1.8em 0 1.1em 0;
+  line-height: 1.8em;
+  color: gray;
+  font-weight: 500;
+}
+
+button {
+  border: 2px solid #daa44e;
+  border-radius: 3px;
+  outline: none;
+  padding: 0.9em 2.8em;
+  font-size: 1rem;
+  font-family: "Be Vietnam", sans-serif;
+  font-weight: 500;
+  color: white;
+  background-color: #daa44e;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+button:hover {
+  background-color: transparent;
+  color: #daa44e;
 }
 /*# sourceMappingURL=home.css.map */
