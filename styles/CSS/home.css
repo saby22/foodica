@@ -1,6 +1,5 @@
 *, *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -24,15 +23,9 @@ body {
 }
 
 .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   min-height: 85px;
   width: 100%;
   margin: 0 auto;
@@ -49,17 +42,13 @@ body {
 }
 
 .nav .nav-links {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 45%;
   display: none;
 }
 
 @media screen and (min-width: 810px) {
   .nav .nav-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -81,12 +70,33 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 1.3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav .nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background: #daa44e;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 195ms ease-in-out;
+}
+
+.nav .nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .nav .burger {
   height: auto;
   width: 1.8em;
   cursor: pointer;
+  position: relative;
 }
 
 @media screen and (min-width: 810px) {
@@ -100,10 +110,30 @@ body {
   height: 0.25em;
   background-color: #daa44e;
   border-radius: 10px;
+  transition: all 300ms ease-in-out;
 }
 
 .nav .burger div:not(:last-child) {
   margin-bottom: 4px;
+}
+
+.open .line2 {
+  opacity: 0;
+  transition: opacity 100ms ease-in-out;
+}
+
+.open .line1 {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.open .line3 {
+  transform: rotate(135deg);
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .newsletter {
@@ -119,30 +149,17 @@ body {
 
 .newsletter .newsletter-container {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .newsletter .newsletter-container .newsletter-content {
   max-width: 500px;
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .newsletter .newsletter-container .newsletter-content h1 {
@@ -174,18 +191,12 @@ body {
 
 .newsletter .newsletter-container .newsletter-content form {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .newsletter .newsletter-container .newsletter-content input[type="text"] {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  flex-grow: 2;
   width: 70%;
   height: 60px;
   outline: none;
@@ -210,7 +221,6 @@ body {
   border-radius: 0 5px 5px 0;
   color: white;
   cursor: pointer;
-  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
@@ -225,7 +235,8 @@ body {
 .jumbotron-cover {
   width: 100%;
   height: 100vh;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 19, 40, 0.7)), to(rgba(0, 19, 40, 0.7))), url(../../../img/jumbotron.jpg);
+  background-position: center center;
+  background-size: cover;
   background-image: linear-gradient(0deg, rgba(0, 19, 40, 0.7), rgba(0, 19, 40, 0.7)), url(../../../img/jumbotron.jpg);
   background-position: center center;
   background-size: cover;
@@ -241,8 +252,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .jumbotron-cover .text h1 {
@@ -270,7 +280,6 @@ body {
   color: #daa44e;
   background-color: transparent;
   cursor: pointer;
-  -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
@@ -279,46 +288,59 @@ body {
   color: white;
 }
 
-.tip_heading {
-  margin-top: 0.5em;
+.chefs-choice {
+  display: flex;
+  flex-direction: column;
+}
+
+.chefs-choice h1 {
+  margin: 0.4em 0;
   font-family: "Great Vibes", cursive;
+  font-size: 4rem;
   color: #daa44e;
-  font-size: 3.3rem;
 }
 
-.tip_text .tip_container {
-  border: 2px solid black;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.chefs-choice .course-container {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 3em 0;
+  flex-direction: column;
+  align-items: center;
 }
 
-.tip_text .tip_container img {
-  width: 60px;
-  margin-bottom: 0.8em;
+.chefs-choice .course-container .course {
+  position: relative;
+  margin-bottom: 2.89em;
+  border-radius: 5px;
 }
 
-.tip_text .tip_container p {
-  font-family: "Poppins", sans-serif;
-  line-height: 1.4em;
+.chefs-choice .course-container .course img {
+  width: 100%;
+  border-radius: 5px;
 }
 
-.tip_container_heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.2rem;
+.chefs-choice .course-container .course .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 99.5%;
+  width: 100%;
+  background-color: rgba(10, 10, 10, 0.507);
+  border-radius: 5px;
 }
 
-.tip_container_heading h2 {
-  margin-left: 0.2em;
+.chefs-choice .course-container .course h2 {
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2.5rem;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 1.5px;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=home.css.map */
