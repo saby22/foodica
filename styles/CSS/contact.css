@@ -199,7 +199,7 @@ body {
   font-size: 1.2rem;
   color: white;
   position: relative;
-  padding-bottom: 0.8em;
+  padding-bottom: 0.4em;
 }
 
 @media screen and (min-width: 500px) {
@@ -232,7 +232,7 @@ body {
 }
 
 .burger-links a:not(:last-child) {
-  margin-bottom: 1.2em;
+  margin-bottom: 0.6em;
 }
 
 .burger-links a:hover::after {

@@ -134,7 +134,7 @@
         }
         color: white;
         position: relative;
-        padding-bottom: 0.8em;
+        padding-bottom: 0.4em;
     }
 
     a::after{
@@ -156,7 +156,7 @@
     }
 
     a:not(:last-child){
-        margin-bottom: 1.2em;
+        margin-bottom: 0.6em;
     }
 
     a:hover::after{
