@@ -8,6 +8,10 @@
 .recent-posts{
     width: 100%;
     margin: 2em 0 6em 0;
+    @include min-width(800px){
+        margin-bottom: 0;
+    }
+
     .recent-posts-heading{
         font-weight: 800;
         font-size: 1.8rem;
@@ -35,7 +39,7 @@
     }
 
     .recent-posts-contents{
-        @include min-width(700px){
+        @include min-width(800px){
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
@@ -44,7 +48,7 @@
 
     .recent-individual-posts{
         margin-bottom: 1.5em;
-        @include min-width(700px){
+        @include min-width(800px){
             width: 60%;
         }
 
@@ -65,7 +69,7 @@
     
         #rp:not(:last-of-type){
             border-bottom:1px solid rgba(0,0,0,0.2);
-            @include min-width(440px){
+            @include min-width(800px){
                 border:none;
             }
         }
@@ -88,12 +92,13 @@
 
 .featured-posts{
     width: 100%;
-    margin: 0 0 2em 0;
+    padding: 2em 0;
 
-    @include min-width(700px){
-        padding: 1.5em;
+    @include min-width(800px){
+        padding: 2.5em 2.5em 3em 2.5em;
+        margin: 0;
     }
-    
+
     &-heading{
         font-weight: 800;
         font-size: 1.8rem;
@@ -120,7 +125,7 @@
     }
 
     &-content{
-        @include min-width(700px){
+        @include min-width(800px){
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -129,18 +134,24 @@
 
     #fp{
         @include featured-posts;
-        @include min-width(700px){
+        margin-bottom: 3em;
+        @include min-width(800px){
             margin-bottom: 4em;
             width: 45%;
         }
         @include min-width(1000px){
-            margin-bottom: 4em;
             width: 30%;
         }
         @include min-width(1100px){
             margin-bottom: 0;
             width: 22%;
         }
+
+        // p{
+        //     @include min-width(800px){
+        //         margin: 1.8em 0 1.1em 0;
+        //     }
+        // }
     }
 
     #fp:not(:first-of-type){
@@ -159,7 +170,7 @@
 }
 
 .e-book{
-    @include min-width(700px){
+    @include min-width(800px){
         width: 35%;
     }
 

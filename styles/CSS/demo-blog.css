@@ -176,13 +176,10 @@ body {
   -webkit-transform-origin: top;
           transform-origin: top;
   background-color: #daa44e;
+  opacity: 0;
   padding: 1.6rem;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 @media screen and (min-width: 810px) {
@@ -239,10 +236,7 @@ body {
 }
 
 .burger-links.burger-on {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-  -webkit-transform-origin: top;
-          transform-origin: top;
+  opacity: 1;
 }
 
 .burger-mobile-overlay {
@@ -256,8 +250,8 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#cbcbcb), color-stop(100%, #595959), to(black));
   background: linear-gradient(180deg, #cbcbcb 0%, #595959 100%, black 100%);
   opacity: 0;
-  -webkit-transition: opacity 210ms ease-in-out;
-  transition: opacity 210ms ease-in-out;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 .burger-mobile-overlay.active {
@@ -718,7 +712,7 @@ body {
 }
 
 .blog-content .recent-posts .recent-individual-posts #rp p {
-  margin: 1.8em 0 1.6em 0;
+  margin: 1em 0 1.6em 0;
   line-height: 1.8em;
   color: gray;
   font-weight: 500;

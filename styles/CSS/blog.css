@@ -176,13 +176,10 @@ body {
   -webkit-transform-origin: top;
           transform-origin: top;
   background-color: #daa44e;
+  opacity: 0;
   padding: 1.6rem;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 @media screen and (min-width: 810px) {
@@ -239,10 +236,7 @@ body {
 }
 
 .burger-links.burger-on {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-  -webkit-transform-origin: top;
-          transform-origin: top;
+  opacity: 1;
 }
 
 .burger-mobile-overlay {
@@ -256,8 +250,8 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#cbcbcb), color-stop(100%, #595959), to(black));
   background: linear-gradient(180deg, #cbcbcb 0%, #595959 100%, black 100%);
   opacity: 0;
-  -webkit-transition: opacity 210ms ease-in-out;
-  transition: opacity 210ms ease-in-out;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 .burger-mobile-overlay.active {
@@ -495,6 +489,12 @@ body {
   margin: 2em 0 6em 0;
 }
 
+@media screen and (min-width: 800px) {
+  .recent-posts {
+    margin-bottom: 0;
+  }
+}
+
 .recent-posts .recent-posts-heading {
   font-weight: 800;
   font-size: 1.8rem;
@@ -526,7 +526,7 @@ body {
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .recent-posts .recent-posts-contents {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -544,7 +544,7 @@ body {
   margin-bottom: 1.5em;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .recent-posts .recent-individual-posts {
     width: 60%;
   }
@@ -582,7 +582,7 @@ body {
 }
 
 .recent-posts .recent-individual-posts #rp p {
-  margin: 1.8em 0 1.6em 0;
+  margin: 1em 0 1.6em 0;
   line-height: 1.8em;
   color: gray;
   font-weight: 500;
@@ -619,7 +619,7 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (min-width: 440px) {
+@media screen and (min-width: 800px) {
   .recent-posts .recent-individual-posts #rp:not(:last-of-type) {
     border: none;
   }
@@ -647,12 +647,13 @@ body {
 
 .featured-posts {
   width: 100%;
-  margin: 0 0 2em 0;
+  padding: 2em 0;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .featured-posts {
-    padding: 1.5em;
+    padding: 2.5em 2.5em 3em 2.5em;
+    margin: 0;
   }
 }
 
@@ -687,7 +688,7 @@ body {
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .featured-posts-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -698,6 +699,10 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+}
+
+.featured-posts #fp {
+  margin-bottom: 3em;
 }
 
 .featured-posts #fp img {
@@ -718,7 +723,7 @@ body {
 }
 
 .featured-posts #fp p {
-  margin: 1.8em 0 1.1em 0;
+  margin: 1em 0 1.1em 0;
   line-height: 1.8em;
   color: gray;
   font-weight: 500;
@@ -744,7 +749,7 @@ body {
   color: #daa44e;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .featured-posts #fp {
     margin-bottom: 4em;
     width: 45%;
@@ -753,7 +758,6 @@ body {
 
 @media screen and (min-width: 1000px) {
   .featured-posts #fp {
-    margin-bottom: 4em;
     width: 30%;
   }
 }
@@ -785,7 +789,7 @@ body {
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .e-book {
     width: 35%;
   }

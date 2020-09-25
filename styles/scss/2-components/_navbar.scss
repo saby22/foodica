@@ -116,10 +116,9 @@
     align-items: center;
     transform-origin: top;
     background-color: $golden;
-    // opacity:0.9;
+    opacity:0;
     padding: 1.6rem;
-    transform: scaleY(0);
-    transition: transform 500ms ease-in-out;
+    transition: opacity 500ms ease-in-out;
 
     @include min-width(810px){
         display: none;
@@ -165,8 +164,7 @@
 }
 
 .burger-links.burger-on{
-    transform: scaleY(1);
-    transform-origin: top;
+    opacity: 1;
 }
 
 .burger-mobile-overlay{
@@ -179,7 +177,7 @@
     left:0;
     background: linear-gradient(180deg, #cbcbcb 0%, #595959 100%, black 100%);
     opacity: 0;
-    transition: opacity 210ms ease-in-out;
+    transition: opacity 500ms ease-in-out;
 }
 
 .burger-mobile-overlay.active{
