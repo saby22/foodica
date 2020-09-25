@@ -102,7 +102,6 @@
 .burger-links{
     position: absolute;
     width: 80%;
-    // height: 85px;
     top: 200px;
     left: 0;
     right: 0;
@@ -119,7 +118,7 @@
     opacity:0;
     padding: 1.6rem;
     transition: opacity 500ms ease-in-out;
-
+    pointer-events: none;
     @include min-width(810px){
         display: none;
     }
@@ -165,6 +164,7 @@
 
 .burger-links.burger-on{
     opacity: 1;
+    pointer-events: all;
 }
 
 .burger-mobile-overlay{

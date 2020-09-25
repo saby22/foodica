@@ -180,6 +180,7 @@ body {
   padding: 1.6rem;
   -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 810px) {
@@ -237,6 +238,7 @@ body {
 
 .burger-links.burger-on {
   opacity: 1;
+  pointer-events: all;
 }
 
 .burger-mobile-overlay {
