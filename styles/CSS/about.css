@@ -269,4 +269,23 @@ body {
 .navigator div span {
   font-weight: 500;
 }
+
+.about-container {
+  border: 2px solid black;
+}
+
+.about-container .about-text {
+  border: 2px solid red;
+}
+
+.about-container .about-image {
+  border: 2px solid orangered;
+  width: 100%;
+  height: 530px;
+  background-image: url(../../../img/about-img.jpg);
+  background-position: center bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 /*# sourceMappingURL=about.css.map */
