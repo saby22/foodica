@@ -316,7 +316,7 @@ body {
 
 .e-book {
   width: 100%;
-  background-color: #f8f9fa;
+  background-color: rgba(211, 211, 211, 0.26);
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -721,6 +721,7 @@ footer .footer-content .footer-copyright .social-logos img:hover {
 .recent-posts .recent-individual-posts #rp img {
   width: 100%;
   margin-bottom: 0.8em;
+  border-radius: 3px;
 }
 
 .recent-posts .recent-individual-posts #rp h1 {
@@ -806,7 +807,7 @@ footer .footer-content .footer-copyright .social-logos img:hover {
 
 @media screen and (min-width: 800px) {
   .featured-posts {
-    padding: 2.5em 2.5em 3em 2.5em;
+    padding: 2.5em 0 3em 0;
     margin: 0;
   }
 }
@@ -862,6 +863,7 @@ footer .footer-content .footer-copyright .social-logos img:hover {
 .featured-posts #fp img {
   width: 100%;
   margin-bottom: 0.8em;
+  border-radius: 4px;
 }
 
 .featured-posts #fp h1 {
