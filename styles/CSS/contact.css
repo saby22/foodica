@@ -380,10 +380,41 @@ footer .footer-content .footer-links div a {
   width: 150px;
   cursor: pointer;
   color: #a0a3a5;
+  position: relative;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
 }
 
 footer .footer-content .footer-links div a:not(:last-child) {
   margin-bottom: 0.8em;
+}
+
+footer .footer-content .footer-links div a:hover {
+  color: #daa44e;
+}
+
+footer .footer-content .footer-links div a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  border-radius: 10px;
+  left: 0;
+  width: 90%;
+  height: 2px;
+  background-color: #daa44e;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+footer .footer-content .footer-links div a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 footer .footer-content .footer-links div:not(:last-child) {
@@ -424,6 +455,15 @@ footer .footer-content .footer-copyright .social-logos {
 footer .footer-content .footer-copyright .social-logos img {
   width: 20px;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+footer .footer-content .footer-copyright .social-logos img:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .hidden {

@@ -40,10 +40,34 @@ footer{
                     // display: block;
                     cursor: pointer;
                     color: #a0a3a5;
+                    position: relative;
+                    transition: color 200ms ease-in-out;
                 }
 
                 a:not(:last-child){
                     margin-bottom: 0.8em;
+                }
+
+                a:hover{
+                    color: $golden;
+                }
+
+                a::after{
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    border-radius: 10px;
+                    left: 0;
+                    width: 90%;
+                    height: 2px;
+                    background-color: $golden;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: transform 200ms ease-in-out;
+                }
+
+                a:hover::after{
+                    transform: scaleX(1);
                 }
             }
 
@@ -78,6 +102,10 @@ footer{
                 img{
                     width: 20px;
                     cursor: pointer;
+                    transition: transform 200ms ease-in-out;
+                }
+                img:hover{
+                    transform: scale(1.4);
                 }
             }
         }
