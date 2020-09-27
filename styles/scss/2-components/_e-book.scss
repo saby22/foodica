@@ -7,7 +7,6 @@
     align-items: center;
     border-radius: 4px;
     padding: 1.6em 0;
-
     h1{
         font-size: 1.8rem;
         margin-bottom: 0.4em;
@@ -20,6 +19,27 @@
         margin-bottom: 1.8em;
         line-height: 30px;
     }
+
+    .book{
+        height: 70%;
+        max-height: 250px;
+        margin-bottom: 1.2em;
+        position: relative;
+        left: 12px;
+        @include min-width(800px){
+            max-height: 300px;
+        }
+
+        @include min-width(1000px){
+            max-height: 225px;
+            left: 10px
+        }
+
+        @include min-width(1220px){
+            max-height: 275px;
+        }
+    }
+
     span{
         font-weight: 700;
     }
@@ -42,3 +62,10 @@
         color: $golden;
     }
 }
+
+// 1000 1200
+// @media screen and(min-width:1000px) and (max-width:1220px){
+//     .book{
+//         max-height: 250px;
+//     }
+// }

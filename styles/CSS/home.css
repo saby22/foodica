@@ -561,6 +561,33 @@ footer .footer-content .footer-copyright .social-logos img:hover {
   line-height: 30px;
 }
 
+.e-book .book {
+  height: 70%;
+  max-height: 250px;
+  margin-bottom: 1.2em;
+  position: relative;
+  left: 12px;
+}
+
+@media screen and (min-width: 800px) {
+  .e-book .book {
+    max-height: 300px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .e-book .book {
+    max-height: 225px;
+    left: 10px;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .e-book .book {
+    max-height: 275px;
+  }
+}
+
 .e-book span {
   font-weight: 700;
 }
@@ -1281,6 +1308,12 @@ footer .footer-content .footer-copyright .social-logos img:hover {
   font-weight: 300;
   font-size: 0.8rem;
   margin-bottom: 1em;
+}
+
+@media screen and (min-width: 800px) {
+  .cookbook .cookbook-container .cookbook-text h3 {
+    font-size: 1rem;
+  }
 }
 
 .cookbook .cookbook-container .cookbook-text h1 {

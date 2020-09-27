@@ -346,6 +346,33 @@ body {
   line-height: 30px;
 }
 
+.e-book .book {
+  height: 70%;
+  max-height: 250px;
+  margin-bottom: 1.2em;
+  position: relative;
+  left: 12px;
+}
+
+@media screen and (min-width: 800px) {
+  .e-book .book {
+    max-height: 300px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .e-book .book {
+    max-height: 225px;
+    left: 10px;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .e-book .book {
+    max-height: 275px;
+  }
+}
+
 .e-book span {
   font-weight: 700;
 }
