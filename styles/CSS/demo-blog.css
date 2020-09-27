@@ -453,6 +453,7 @@ footer .footer-content .footer-copyright .social-logos img:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .newsletter .newsletter-container .newsletter-content h1 {
@@ -519,6 +520,15 @@ footer .footer-content .footer-copyright .social-logos img:hover {
 
 .newsletter .newsletter-container .newsletter-content input[type="submit"]:hover {
   opacity: 0.5;
+}
+
+.newsletter .newsletter-container .newsletter-content h3 {
+  position: absolute;
+  color: red;
+  font-size: 0.8rem;
+  font-weight: 300;
+  bottom: -21px;
+  left: 0;
 }
 
 .hidden {
