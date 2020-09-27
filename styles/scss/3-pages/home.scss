@@ -4,25 +4,16 @@
 @import '../2-components/newsletter';
 @import '../2-components/hidden';
 @import '../2-components/e-book';
-
-
-
-
-
-
 .jumbotron-cover{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(0deg, rgba(0, 19, 40, 0.7), rgba(0, 19, 40, 0.7)), url(../../../img/jumbotron.jpg);
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
-    // display: flex;
-    // flex-direction: column;
+    // background-attachment: fixed;
     position: relative;
 
    .text{
-    // border: 2px solid white;
     width: 100%;
     text-align: center;
     color: white;
@@ -51,9 +42,11 @@
         letter-spacing: 2.5px;
         font-size: 2.5rem;
         margin-bottom: 0.5em;
+
         @include min-width(500px){
             font-size: 3.7rem;
         }
+
         @include min-width(800px){
             font-size: 5.8rem;
             margin-bottom: 0.3em;
@@ -62,7 +55,6 @@
 
 
     .btn{
-        
         button{
             border: 2px solid $golden;
             border-radius: 3px;
@@ -85,80 +77,104 @@
    }
 }
 
-
-
-.chefs-choice{
-    border: 2px solid magenta;
+.chef{
+    background: linear-gradient(180deg, rgba(168,168,168,0.4) 0%, rgba(168,168,168,0.4) 100%), url(../../../img/chef-special-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0;
 
-    
-   
-    h1{
-        margin: 0.4em 0;
-        // font-family: $montserrat;
-        font-size: 4rem;
-        color: $golden;
-    }
-
-    .course-container{
-        border: 2px solid black;
+    .chef-container{
         display: flex;
-        flex-direction: column;
-        @include min-width(800px){
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: stretch;
-        }
+        justify-content: center;
         align-items: center;
-
-        .course{
-            // border: 2px solid red;
-            // width: 90%;
-            position: relative;
-            margin-bottom: 2.89em;
-            border-radius: 5px;
-            @include min-width(800px){
-                width: 30%;
-            }
-
+        flex-direction: column;
+        height: auto;
+        max-width: 800px;
+        box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+        @include min-width(1366px){
+            flex-direction: row;
+            align-items: stretch;
+            max-width: 1250px;
+        }
+        // border: 1px solid;
+        .chef-special-image{
             img{
                 width: 100%;
                 display: block;
-                border-radius: 5px;
+                border-radius: 6px 6px 0 0;
+                @include min-width(1366px){
+                    border-radius: 0 6px 6px  0;
+                }
+            } 
+            
+            @include min-width(1366px){
+                order:2;
+                width: 50%;
+            }
+        }
+        .chef-text{
+            background-color:white;
+            text-align: center;
+            padding: 1.2em 0;
+            border-radius: 0 0 6px 6px;
+            h1{
+                color:$black;
+                font-size: 1.6rem;
+                font-family: $josefin;
+                margin-bottom: 12px;
+                @include min-width(430px){
+                    font-size: 2.6rem;
+                }
             }
 
-            .overlay{
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: 100%;
-                width: 100%;
-                // @include min-width(800px){
-                //     width: 30%;
-                // }
-                // opacity: 0;
-                // transition: .5s ease;
-                background-color: rgba(10, 10, 10, 0.507);
-                border-radius: 5px;
-
-            }
-
-            h2{
-                position: absolute;
-                color: white;
-                text-transform: uppercase;
+            h1:first-child{
+                font-family: $sacramento;
+                color: $golden;
+                font-size: 3rem;
                 font-weight: 300;
-                font-size: 2.5rem;
-                width: 100%;
-                text-align: center;
-                letter-spacing: 1.5px;
-                z-index: 3;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                @include min-width(430px){
+                    font-size: 4rem;
+                }
+            }
+
+            p{
+                font-size: 0.9rem;
+                width: 80%;
+                margin: 0 auto 2em auto;
+                color:gray;
+                @include min-width(430px){
+                    font-size: 1.2rem;
+                }
+            }
+
+            button{
+                border: 2px solid $golden;
+                border-radius: 3px;
+                outline: none;
+                padding: 0.9em 2.8em;
+                font-size: 1rem;
+                font-family: $beVietnam;
+                font-weight: 500;
+                color: white;
+                background-color: $golden;
+                cursor: pointer;
+                transition: all 200ms ease-in-out;
+            }
+        
+            button:hover{
+                background-color: transparent;
+                color: $golden;
+            }
+
+            @include min-width(1366px){
+                width: 50%;
+                border-radius: 6px 0 0 6px;
             }
         }
     }
@@ -250,19 +266,19 @@
         }
     }
     
-    .recent-posts-heading::after{
-        content:"";
-        position: absolute;
-        bottom: 7px;
-        left: 215px;
-        width: 8px;
-        height: 8px;
-        background-color: $black;
-        border-radius: 10px;
-        @include min-width(700px){
-            left: 250px;
-        }
-    }
+    // .recent-posts-heading::after{
+    //     content:"";
+    //     position: absolute;
+    //     bottom: 7px;
+    //     left: 215px;
+    //     width: 8px;
+    //     height: 8px;
+    //     background-color: $black;
+    //     border-radius: 10px;
+    //     @include min-width(700px){
+    //         left: 250px;
+    //     }
+    // }
 
     .recent-posts-contents{
         @include min-width(800px){
@@ -327,6 +343,7 @@
     button{
         padding: 0.9em 2em;
     }
+
     @include min-width(800px){
         width: 35%;
     }
@@ -356,19 +373,19 @@
         }
     }
     
-    &-heading::after{
-        content:"";
-        position: absolute;
-        bottom: 7px;
-        left: 280px;
-        width: 8px;
-        height: 8px;
-        background-color: rgb(211, 209, 209);
-        border-radius: 10px;
-        @include min-width(700px){
-            left: 330px;
-        }
-    }
+    // &-heading::after{
+    //     content:"";
+    //     position: absolute;
+    //     bottom: 7px;
+    //     left: 280px;
+    //     width: 8px;
+    //     height: 8px;
+    //     background-color: rgb(211, 209, 209);
+    //     border-radius: 10px;
+    //     @include min-width(700px){
+    //         left: 330px;
+    //     }
+    // }
 
     &-content{
         @include min-width(800px){
@@ -491,6 +508,7 @@
                 max-width: 540px;
                 @include min-width(800px){
                     max-width: 1000px;
+                    line-height: 2em;
                 }
                 
             }
