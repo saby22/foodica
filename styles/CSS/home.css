@@ -492,32 +492,56 @@ footer .footer-content .footer-copyright .social-logos img:hover {
   width: 100%;
   text-align: center;
   color: white;
-  font-family: "Be Vietnam", sans-serif;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 
-.jumbotron-cover .text h1 {
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 1.8em;
-  letter-spacing: 0.125em;
+.jumbotron-cover .text h1:first-child {
+  font-family: "Sacramento", cursive;
+  font-weight: 400;
 }
 
-.jumbotron-cover .text p {
-  font-size: 1.3rem;
-  font-weight: 300;
-  margin-bottom: 1.5em;
+@media screen and (min-width: 500px) {
+  .jumbotron-cover .text h1:first-child {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .jumbotron-cover .text h1:first-child {
+    font-size: 3.8rem;
+  }
+}
+
+.jumbotron-cover .text h1:not(:first-child) {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+
+@media screen and (min-width: 500px) {
+  .jumbotron-cover .text h1:not(:first-child) {
+    font-size: 3.7rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .jumbotron-cover .text h1:not(:first-child) {
+    font-size: 5.8rem;
+    margin-bottom: 0.3em;
+  }
 }
 
 .jumbotron-cover .text .btn button {
   border: 2px solid #daa44e;
   border-radius: 3px;
   outline: none;
-  padding: 0.8em 2.5em;
+  padding: 0.5em 2em;
   font-size: 1.3rem;
   font-family: "Be Vietnam", sans-serif;
   font-weight: 500;
@@ -540,7 +564,6 @@ footer .footer-content .footer-copyright .social-logos img:hover {
 
 .chefs-choice h1 {
   margin: 0.4em 0;
-  font-family: "Great Vibes", cursive;
   font-size: 4rem;
   color: #daa44e;
 }

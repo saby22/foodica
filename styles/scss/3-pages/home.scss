@@ -26,26 +26,40 @@
     width: 100%;
     text-align: center;
     color: white;
-    font-family: $beVietnam;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: hidden;
 
-    h1{
-        text-transform: uppercase;
-        font-size: 2rem;
-        font-weight: 300;
-        line-height: 1.8em;
-        letter-spacing: 0.125em;
+    h1:first-child{
+        font-family: $sacramento;
+        font-weight: 400;
+        
+        @include min-width(500px){
+            font-size: 2.5rem;
+        }
+
+        @include min-width(800px){
+            font-size: 3.8rem;
+        }
     }
 
-    p{
-        font-size: 1.3rem;
-        font-weight: 300;
-        // line-height: 1.5em;
-        margin-bottom: 1.5em;
+    h1:not(:first-child){
+        font-family: $josefin;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        font-size: 2.5rem;
+        margin-bottom: 0.5em;
+        @include min-width(500px){
+            font-size: 3.7rem;
+        }
+        @include min-width(800px){
+            font-size: 5.8rem;
+            margin-bottom: 0.3em;
+        }
     }
+
 
     .btn{
         
@@ -53,7 +67,7 @@
             border: 2px solid $golden;
             border-radius: 3px;
             outline: none;
-            padding: 0.8em 2.5em;
+            padding: 0.5em 2em;
             font-size: 1.3rem;
             font-family: $beVietnam;
             font-weight: 500;
@@ -82,7 +96,7 @@
    
     h1{
         margin: 0.4em 0;
-        font-family: $greatVibes;
+        // font-family: $montserrat;
         font-size: 4rem;
         color: $golden;
     }
